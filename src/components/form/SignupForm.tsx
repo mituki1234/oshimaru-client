@@ -21,7 +21,7 @@ function SignupForm() {
       );
       console.log(responce.data.message);
     } catch (error) {
-      console.log(error.response?.data?.message);
+      console.log(error);
     }
     console.log(userId, password);
   };
