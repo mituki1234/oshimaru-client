@@ -1,0 +1,46 @@
+.overlay {
+    height: 90vh;
+    width: 100%;
+    background-color: var(--base-color-1);
+    display: flex;
+}
+
+.login-form {
+    width: 30%;
+    height: 30em;
+    margin: auto;
+    background-color: white;
+    border-radius: 1em;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.login-form h2 {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+.login-form input {
+    height: 3em;
+    width: 80%;
+    margin-bottom: 2em;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 1.0em;
+}
+.login-form button {
+    height: 3em;
+    width: 81%;
+    margin-left: 10%;
+    border: 0;
+    background-color: var(--base-color-1);
+    color: white;
+    font-size: 1.0em;
+}
+.login-form button:active {
+    background-color: var(--base-color-6); /* 濃い緑色 */
+}
+.login-form p {
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+}
