@@ -1,0 +1,32 @@
+.alert {
+    position: fixed;
+    width: 50%;
+    height: 5em;
+    left: 25%;
+    bottom: 1em;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 1em;
+    animation: slideUp 3.5s ease-in-out;
+    transform-origin: bottom;
+    z-index: 9999;
+}
+.error {
+    background-color: var(--red-1);
+    color: white;
+}
+.neutral {
+    background-color: white;
+    color: black;
+}
+.alert p {
+    font-size: 1.2em;
+    text-align: center;
+}
+@keyframes slideUp {
+    0%, 85%, 100% {
+        transform: translateY(200%);
+    }
+    25%, 60% {
+        transform: translateY(0);
+    }
+}
