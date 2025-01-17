@@ -14,7 +14,7 @@ function Alert(Text: string, type: string) {
     alertText.classList.add("alert-text");
     alertText.textContent = Text;
     alert.appendChild(alertText);
-    parent.appendChild(alert);
+    parent?.appendChild(alert);
     alertFlag = true;
     setTimeout(() => {
       alert.remove();
