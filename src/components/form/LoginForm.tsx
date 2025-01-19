@@ -27,9 +27,9 @@ function LoginForm() {
     else {
       try {
         const responce = await axios.post(
-          "http://localhost:3000/signup",
+          "http://localhost:3002/login",
           {
-            type: "requestLogin",
+            type: "requestSignup",
             data: {
               userId: userId,
               password: password,
@@ -46,7 +46,7 @@ function LoginForm() {
   return (
     <div className="overlay">
       <div className="login-form">
-        <h2>サインアップ</h2>
+        <h2>ログイン</h2>
         <input
           type="text"
           placeholder="IDを入力"
@@ -65,9 +65,9 @@ function LoginForm() {
           <li>パスワードには大文字を入れる</li>
           <li>パスワードには特殊な文字は入れない</li>
         </ul>
-        <button onClick={handleSendSignup}>サインアップ</button>
+        <button onClick={handleSendSignup}>ログイン</button>
         <p>
-          アカウントを持っている?<a href="/login">こちら</a>をクリック
+          アカウント持っていない？<a href="/signup">こちら</a>をクリック
         </p>
       </div>
     </div>

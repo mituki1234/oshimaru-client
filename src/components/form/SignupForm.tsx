@@ -3,6 +3,29 @@ import axios from "axios";
 import Alert from "../alert/Alert";
 import "../../styles/form/LoginForm.css";
 
+const getProtectedData = async () => {
+  try {
+    const response = await axios.get(
+      'http://localhost:3002/get-cookie', // 保護されたエンドポイント
+      { withCredentials: true } // クッキーを送信
+    );
+    console.log(response.data.data.message); // 保護されたデータ
+    if (response.data.data.message === "loginSuccess"){
+      if (window.location.pathname === "/login") {
+        window.location.href = "/";
+      } else if (window.location.pathname === "/signup") {
+        window.location.href = "/";
+      } else {
+        console.log("だめだね");
+      }
+    }
+  } catch (error) {
+    console.error("だめだね");
+  }
+};
+
+getProtectedData();
+
 function SignupForm() {
   const [password, setPassword] = useState("");
   const [userId, setUserId] = useState("");
@@ -27,7 +50,7 @@ function SignupForm() {
     else {
       try {
         const responce = await axios.post(
-          "http://localhost:3000/signup",
+          "http://localhost:3002/signup",
           {
             type: "requestSignup",
             data: {
